@@ -1,0 +1,45 @@
+{
+  "name": "nostr-one",
+  "description": "The last button you will ever need to login with Nostr",
+  "private": false,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dolu89/nostr-one.git"
+  },
+  "author": "dolu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dolu89/nostr-one/issues"
+  },
+  "homepage": "https://github.com/dolu89/nostr-one#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "nostr-tools": "^1.13.0",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "sass": "^1.63.6",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.0",
+    "vue-tsc": "^1.8.3"
+  },
+  "files": [
+    "dist/"
+  ],
+  "main": "./dist/nostr-one.umd.js",
+  "module": "./dist/nostr-one.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/nostr-one.umd.js",
+      "require": "./dist/nostr-one.es.js"
+    }
+  }
+}
