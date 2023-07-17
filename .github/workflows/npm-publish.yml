@@ -11,7 +11,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 18
-      - run: yarn install
+      - run: pnpm install
 #      - run: npm test
       - uses: JS-DevTools/npm-publish@v1
         with:
