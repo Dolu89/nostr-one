@@ -2,7 +2,7 @@
   "name": "nostr-one",
   "description": "The last button you will ever need to login with Nostr",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",

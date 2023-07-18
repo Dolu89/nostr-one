@@ -24,9 +24,13 @@ declare global {
 }
 
 onMounted(() => {
-  if (window.nostr) {
-    nip07Enabled.value = true;
-  }
+  // Hack: window.nostr is not always available on mount
+  const timeout = setTimeout(() => {
+    if (window.nostr) {
+      nip07Enabled.value = true;
+    }
+    clearTimeout(timeout);
+  }, 100);
 });
 
 const nip07Enabled = ref<boolean>(false);
